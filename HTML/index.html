@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desserts — Product List with Cart</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+
+    <!-- ===================== MAIN LAYOUT ===================== -->
+    <main class="layout" id="main-content">
+
+      <!-- ===== PRODUCT SECTION ===== -->
+      <section class="products-section" aria-label="Dessert products">
+        <h1 class="section-title">Desserts</h1>
+        <div class="products-grid" id="products-grid" role="list"></div>
+      </section>
+
+      <!-- ===== CART SIDEBAR ===== -->
+      <aside class="cart-sidebar" aria-label="Your shopping cart">
+        <h2 class="cart-title">Your Cart (<span id="cart-count">0</span>)</h2>
+
+        <!-- Empty state -->
+        <div class="cart-empty" id="cart-empty" aria-live="polite">
+          <img
+            src="../assets/images/illustration-empty-cart.svg"
+            alt="Empty shopping cart illustration"
+            class="cart-empty__illustration"
+          />
+          <p class="cart-empty__text">Your added items will appear here</p>
+        </div>
+
+        <!-- Filled state -->
+        <div class="cart-filled" id="cart-filled" hidden>
+          <ul class="cart-items" id="cart-items" aria-label="Items in cart"></ul>
+
+          <div class="cart-order-total">
+            <span class="cart-order-total__label">Order Total</span>
+            <span class="cart-order-total__value" id="cart-total">$0.00</span>
+          </div>
+
+          <div class="cart-carbon-note">
+            <img
+              src="../assets/images/icon-carbon-neutral.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+
+          <button class="btn-confirm-order" id="btn-confirm-order" type="button">
+            Confirm Order
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <!-- ===================== ORDER CONFIRMATION MODAL ===================== -->
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      hidden
+    >
+      <div class="modal">
+        <img
+          src="../assets/images/icon-order-confirmed.svg"
+          alt="Order confirmed"
+          class="modal__icon"
+        />
+        <h2 class="modal__title" id="modal-title">Order Confirmed</h2>
+        <p class="modal__subtitle">We hope you enjoy your food!</p>
+
+        <div class="modal-items-wrapper">
+          <ul class="modal-items" id="modal-items" aria-label="Order summary"></ul>
+          <div class="modal-order-total">
+            <span class="modal-order-total__label">Order Total</span>
+            <span class="modal-order-total__value" id="modal-total">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn-start-new-order" id="btn-start-new-order" type="button">
+          Start New Order
+        </button>
+      </div>
+    </div>
+
+    <script src="../JS/script.js?v=5"></script>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/mostafa-elhassanain-elsharawy-27592a302/">Mostafa Elsharawy</a>.
+    </footer>
+
+  </body>
+</html>
