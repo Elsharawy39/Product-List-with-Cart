@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Insert your GitHub repository URL here]
-- Live Site URL: [Insert your GitHub Pages live URL here]
+- Live Site URL: [https://elsharawy39.github.io/Product-List-with-Cart/]
 
 ## My process
 
